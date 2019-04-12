@@ -1,9 +1,8 @@
 // 基于数组列表搜索，多字段匹配
 
-import FuzzySearch = require('fuse.js');
-import GraphemeSplitter = require('libs/grapheme-splitter');
-import { Observable } from "rxjs";
-
+import FuzzySearch = require('./node_modules/fuse.js.js');
+import GraphemeSplitter = require('./node_modules/libs/grapheme-splitter');
+import { Observable } from "./node_modules/rxjs";
 
 
 export function createUserSearchingStream(option: UserSearchingViewStreamOptions): Observable<IUserSearchResultMap> {

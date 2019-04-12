@@ -1,16 +1,35 @@
-### 关于git syntax的一些总结
+## 关于git syntax的一些总结
 
----
+### 2019.4.12更新
+项目临近上线，为了保证代码质量，leader增加code review环节，意味着小弟我不能随便向master分支提交代码，转变了git-flow工作模式，也在这个时候
+更深一步学习了git。
+
+#### code-review开发流程：
+
+* 在远程仓库创建两个分支，分别命名master, dev
+* 开发成员各自从dev分支上面fork一份代码到自己仓库
+* 进行feat/bug时候, 本地从fork仓库chekout一个分支, 如feat/aa，此时在自己fork的仓库创建feat/aa远程分支，分支命名最好与code改动的目的相同
+* 完成开发，将本地feat/aa内容push到自己远程仓库的feat/aa，同时在git/git lab页面发起merge request, 请求将改动的分支合并到dev分支，团队讨论
+觉得code没问题了，leader确定merge request，
+* leader将dev合并到master分支
+* 版本发布，直接从master分支打tag
+
+#### more
+ 上面的流程貌似说得有点乱，主要明白code review的目的是为了让产品更加稳定，要求开发者对自己的code负责，增加了团队对改动code进行review，讨论的环节，减轻测试人员的压力。
+
+
 
 ### 常用语法
 
 #### 更新远程代码
 
-* git fetch 
-* git stash 
-* git rebase
-* git stash pop
-* 解决冲突
+```
+git fetch 
+git stash 
+git rebase
+git stash pop //本地修改可能与远程仓库代码存在冲突
+
+```
 
 以上是我早上回到公司常做的一个操作，git fetch更新远程代码，如果你本地工作区
 有修改过，没有和远程仓库保持绝对的一致，则需要用git stash，这个命令会将你的本地修改暂时缓存起来，
@@ -22,10 +41,13 @@
 
 #### 创建分支进行开发，完成后合并到主分支
 
-* git stash (in 'master')
-* git checkout -b 'dev' (create and switch to 'dev')
-* git checkout master
-* git merge dev
+```
+git stash (in 'master')
+git checkout -b 'dev' (create and switch to 'dev')
+git checkout master
+git merge dev
+
+```
 
 在此之前，我一直有个疑问，在master主分支开发不就行了吗？为啥要多此一举创建一个分支？
 直到在工作中慢慢摸索，才理解当中的意义~ 在实际开发中，有些bug或者新功能需要并发处理，
@@ -40,9 +62,12 @@
 
 ##### 本地仓库回退
 
-* git reset HEAD~n
+```
+git reset HEAD~n
 
-* git reset --hard HEAD~n
+git reset --hard HEAD~n
+
+```
 
 n代表需要回退的第几个版本
 
@@ -54,7 +79,11 @@ n代表需要回退的第几个版本
 
 #### 远程仓库回退
 
-* git revert COMMIT_ID
+
+```
+git revert COMMIT_ID
+
+```
 
 以上适用于不小心错误提交代码，并且推送到了远程仓库。这个时候你可以选择把错误代码删除，重新提交推送到远程仓库；又或者使用
 git revert进行版本回退，你需要找到错误提交的commit id，运行后，如果本地有代码冲突，需要手动解决冲突，冲突解决
@@ -66,18 +95,28 @@ git revert进行版本回退，你需要找到错误提交的commit id，运行�
 
 写到现在，发现自己没有耐心详细介绍其他语法的使用情况了，简单说下在实际工作中有遇到的情况
 
-* git commit --amend
+```
+git commit --amend
+
+```
 
 对已经进行了本地提交，但有新的修改文件，想将这些修改的文件整合到这个提交。在此之前，你需要运用git add将文件添加到暂存区
 
-* git rebase -i HEAD~<n>
+```
+git rebase -i HEAD~<n>
+
+```
 
 将多条提交整合到一条。该命令有很多可选项，理解不深就不详细阐述了。。。
 
-* git tag 'beta.1'
-* git push origin bata.1
+```
+ git tag 'beta.1'
+ git push origin bata.1
 
-为仓库打标签，创建一个代码版本标记，QC(测试)可以根据整个tag进行测试，而开发可以愉快地进行后续的开发
+```
+
+为仓库打标签，创建一个代码版本标记，相当于历史快照，QC(测试)可以根据整个tag进行测试，而开发可以在测试期间愉快地进行后续的开发，测试报告出来后
+根据这个快照方便追踪解决问题
 
 
-【以上为个人在工作中对git用法的一些理解，可参考应用到生产环境】
+【以上为个人在工作中对git用法的一些理解，仅供参考】
