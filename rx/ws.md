@@ -42,13 +42,14 @@
 
 ### 简单代码分析
 
-1.websocket是单条推送的，接收一条消息，调用next
+1.websocket是单条推送的，接收一条消息，调用`next()`
+
 ```
 this.webSokectPushSubject.next(payload)
 
 ```
 
-2.通过groupBy操作符分组合并消息类型，相同id的消息为一组
+2.通过`groupBy`操作符分组合并消息类型，相同id的消息为一组
 
 ```
 /*
@@ -59,6 +60,6 @@ this.webSokectPushSubject.next(payload)
 */
 ```
 
-3.mergeMap目的是为每种类型的消息得到并行处理
+3.`mergeMap`保证每种类型的消息得到并行处理
 
-4.switchMap有新消息进来，会取消本次结果，以最新的推送为准，目的为避免提高性能，保证每种类型消息只处理一次
+4.`switchMap`有新消息进来，会取消本次结果，以最新的推送为准，保证每种类型消息只处理一次，避免请求浪费
