@@ -1,4 +1,4 @@
-## markdown工作中所遇到的一些code
+## markdown工作中所遇到业务场景处理方案
 
 ### 目录:
 
@@ -8,3 +8,4 @@
 * [multiple web platform开发设计](https://github.com/Evan-Liao/blog/blob/master/multiple%20platform/README.md)
 * [基于数组匹配关键字搜索](https://github.com/Evan-Liao/blog/blob/master/search/README.md)
 * [RxJS处理应用上线接收批量websocket离线消息](https://github.com/Evan-Liao/blog/blob/master/rx/ws.md)
+* [RxJs轮询处理](https://github.com/Evan-Liao/blog/blob/master/rx/poll.ts)
