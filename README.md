@@ -7,4 +7,4 @@
 * [git语法](https://github.com/Evan-Liao/blog/blob/master/Git/git.md)
 * [multiple web platform开发设计](https://github.com/Evan-Liao/blog/blob/master/multiple%20platform/README.md)
 * [基于数组匹配关键字搜索](https://github.com/Evan-Liao/blog/blob/master/search/README.md)
-* [RxJS处理应用上线接收批量websocket离线消息]((https://github.com/Evan-Liao/blog/blob/master/rx/ws.md))
+* [RxJS处理应用上线接收批量websocket离线消息](https://github.com/Evan-Liao/blog/blob/master/rx/ws.md)
