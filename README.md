@@ -9,4 +9,4 @@
 * [基于数组匹配关键字搜索](https://github.com/Evan-Liao/blog/blob/master/search/README.md)
 * [RxJS处理应用上线接收批量websocket离线消息](https://github.com/Evan-Liao/blog/blob/master/rx/ws.md)
 * [RxJs轮询处理](https://github.com/Evan-Liao/blog/blob/master/rx/poll.md)
-* [参考redux状态管理的实现](https://github.com/Evan-Liao/blog/tree/master/redux)
+* [参考redux实现数据状态管理](https://github.com/Evan-Liao/blog/tree/master/redux)
