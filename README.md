@@ -1,6 +1,6 @@
 ## markdown工作中所遇到业务场景处理方案
 
-### 目录:
+### 业务相关:
 
 * [dfc深度遍历算法](https://github.com/Evan-Liao/blog/blob/master/DFC/dfc.ts)
 * [基于面向对象编程GC垃圾回收](https://github.com/Evan-Liao/blog/blob/master/GC/gc.md)
