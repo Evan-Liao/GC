@@ -1,0 +1,23 @@
+{
+  "name": "git-hooks",
+  "version": "1.0.0",
+  "description": "git-hooks demo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lucas",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "husky": "^2.3.0",
+    "lint-staged": "^8.1.7",
+    "prettier": "^1.17.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged",
+      "commit-msg": "node script/verify-commit-msg.js"
+    }
+  }
+}
