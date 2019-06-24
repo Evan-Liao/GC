@@ -10,3 +10,7 @@
 * [RxJS处理应用上线接收批量websocket离线消息](https://github.com/Evan-Liao/blog/blob/master/rx/ws.md)
 * [RxJs轮询处理](https://github.com/Evan-Liao/blog/blob/master/rx/poll.md)
 * [参考redux实现数据状态管理](https://github.com/Evan-Liao/blog/tree/master/redux)
+
+### 自动化：
+
+* [规范commit-message](https://github.com/Evan-Liao/blog/tree/master/verify-commit-msg)
