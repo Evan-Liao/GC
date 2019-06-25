@@ -16,6 +16,10 @@
 * [规范commit-message](https://github.com/Evan-Liao/blog/tree/master/verify-commit-msg)
 
 
+### webpack
+
+* [《深入浅出webpack》笔记]
+
 ### 其他：
 
 * [同一电脑配置git多账号](https://github.com/Evan-Liao/blog/blob/master/git-multiple-account/README.md)
