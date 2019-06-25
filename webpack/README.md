@@ -1,4 +1,61 @@
-### HappyPack优化
+### Webpack构建优化
+
+主要从以下两方面进行：
+
+### 1. 缩小文件的搜索范围
+
+
+1.1 优化Loader配置
+
+通过`test`, `include`, `exclude`三个配置项命中Loader要应用规则的文件
+
+
+
+1.2 优化resolve.modules配置
+
+配置webpack去哪些目录寻找第三方模块，resolve.module默认值为['node_modules']
+
+
+
+1.3 优化resolve.alias配置
+
+```
+module.exports = {
+  resolve: {
+    // 使用alias将导入react的语句换成直接使用单独，完整的react.min.js文件
+    // 减少耗时的递归解析操作
+    alias: {
+      'react': path.reolve(__dirname, './node_modules/react/dist/react.min.js')
+    }
+  }
+
+}
+
+```
+
+1.4 优化resolve.extensions配置
+
+* 频率出现最高的文件，放在前面，避免寻找过程
+* 确定文件类型，要写全，`require('./data.json')`, not `require('./data')`
+
+
+```
+module.exports = {
+  resolve: {
+    extensions: ['js']
+  
+  }
+  
+}
+
+```
+
+#### 2.基础模块使用dll
+
+大量复用的动态链接库只需被编译一次
+
+
+#### 3.引入HappyPack
 
 将任务分解给多个子进程并发去进行，子进程处理完成后将结果发送给主进程
 
