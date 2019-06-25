@@ -18,7 +18,7 @@
 
 ### webpack
 
-* [《深入浅出webpack笔记》](https://github.com/Evan-Liao/blog/tree/master/webpack)
+* [《深入浅出webpack》笔记](https://github.com/Evan-Liao/blog/tree/master/webpack)
 
 ### 其他：
 
