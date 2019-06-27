@@ -16,7 +16,7 @@
 * [规范commit-message](https://github.com/Evan-Liao/blog/tree/master/verify-commit-msg)
 
 
-### webpack
+### webpack：
 
 * [《深入浅出webpack》笔记](https://github.com/Evan-Liao/blog/tree/master/webpack)
 
