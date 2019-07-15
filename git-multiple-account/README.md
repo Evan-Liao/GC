@@ -20,7 +20,7 @@ touch config
 
 ```
 # Personal GitHub account
-Host github.com-myself
+Host myself
  HostName github.com
  User Evan-Liao
  IdentityFile ~/.ssh/id_rsa_myself
@@ -33,7 +33,7 @@ Host github.com
 
 ```
 
-重点来了，配置文件中，根据自身需求，选择默认的`Host`。我目的是为了学习(摸鱼)，那当然选择工作账号的`ssh-key`为默认的`github.com`，个人账号把Host改为了`github.com-myself`
+重点来了，配置文件中，根据自身需求，选择默认的`Host`。我目的是为了学习(摸鱼)，那当然选择工作账号的`ssh-key`为默认的`github.com`，个人账号把Host改为了`myself`
 其他平台原理一样。
 
 ##### 3.clone使用
@@ -41,7 +41,7 @@ Host github.com
 个人账号：
 ```
 原指令： git clone git@github.com:Evan-Liao/blog.git
-现指令： git clone git@github.com-mysel:Evan-Liao/blog.git
+现指令： git clone git@mysel:Evan-Liao/blog.git
 ```
 
 工作账号使用无影响
