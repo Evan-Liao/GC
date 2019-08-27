@@ -25,6 +25,11 @@ const msg = require('fs').readFileSync(msgPath, 'utf-8').trim()
 
 const commitRE = /^(revert: )?(feat|fix|docs|style|refactor|perf|test|workflow|ci|chore|types|build)(\(.+\))?: .{1,50}/
 
+// 如果是merge产生的自然提交，允许通过
+if (/^Merge branch/.test(msg)) {
+    return;
+}
+
 if (!commitRE.test(msg)) {
   console.log()
   console.error(
