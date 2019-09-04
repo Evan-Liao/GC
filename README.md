@@ -11,11 +11,6 @@
 * [RxJs轮询处理](https://github.com/Evan-Liao/blog/blob/master/rx/poll.md)
 * [参考redux实现数据状态管理](https://github.com/Evan-Liao/blog/tree/master/redux)
 
-### 自动化：
-
-* [规范commit-message](https://github.com/Evan-Liao/blog/tree/master/verify-commit-msg)
-
-
 ### webpack：
 
 * [《深入浅出webpack》笔记](https://github.com/Evan-Liao/blog/tree/master/webpack)
@@ -23,3 +18,5 @@
 ### 其他：
 
 * [同一电脑配置git多账号](https://github.com/Evan-Liao/blog/blob/master/git-multiple-account/README.md)
+* [leetcode练习](https://github.com/Evan-Liao/blog/tree/master/leetcode)
+* [规范commit-message](https://github.com/Evan-Liao/blog/tree/master/verify-commit-msg)
