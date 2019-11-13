@@ -1,23 +1,25 @@
-## markdown工作中所遇到业务场景处理方案
+# markdown工作中所遇到业务场景处理方案
 
-### 业务相关:
+## 业务相关:
 
-* [dfc深度遍历算法](https://github.com/Evan-Liao/blog/blob/master/DFC/dfc.ts)
-* [基于面向对象编程GC垃圾回收](https://github.com/Evan-Liao/blog/blob/master/GC/gc.md)
-* [multiple web platform开发设计](https://github.com/Evan-Liao/blog/blob/master/multiple%20platform/README.md)
-* [基于js实现关键字模糊搜索](https://github.com/Evan-Liao/blog/blob/master/search/README.md)
-* [RxJS处理应用上线接收批量websocket离线消息](https://github.com/Evan-Liao/blog/blob/master/rx/ws.md)
-* [RxJs轮询处理](https://github.com/Evan-Liao/blog/blob/master/rx/poll.md)
-* [参考redux实现数据状态管理](https://github.com/Evan-Liao/blog/tree/master/redux)
+* [关键字模糊搜索](./search-by-keyword)
+* [RxJS处理应用上线并发接收批量websocket离线消息](./RxJs/ws.md)
+* [RxJss实现轮询请求](./RxJs/poll.md)
+* [基于xStateSubject状态管理](./xStateSubject)
+* [深度遍历提取树形结构数据](./dfc/dfc.ts)
+* [GC垃圾回收机制](./gc/gc.md)
+* [multiple web platform开发设计](./web-multiple-platform)
 
-### 学习笔记：
+## 学习笔记：
 
-* [《深入浅出webpack》](https://github.com/Evan-Liao/blog/tree/master/mark/webpack.md)
-* [《高性能Javascript》](https://github.com/Evan-Liao/blog/tree/master/mark/js.md)
+* [《深入浅出NodeJS》](./webpack/mark.md)
+* [babel插件](./babel)
+* [apply/call/bind](./js/apply-call-bind.md)
+* [Array相关方法](./js/array.md)
 
-### 其他：
+## 其他：
 
-* [git语法](https://github.com/Evan-Liao/blog/blob/master/Git/git.md)
-* [同一电脑配置git多账号](https://github.com/Evan-Liao/blog/blob/master/Git/multiple-config.md)
-* [leetcode练习](https://github.com/Evan-Liao/blog/tree/master/leetcode)
-* [规范commit-message](https://github.com/Evan-Liao/blog/tree/master/verify-commit-msg)
+* [git语法](./git/git.md)
+* [同一电脑配置git多账号](./git/multiple-config.md)
+* [leetcode练习](./leetcode)
+* [规范commit-message](./git/VerifyCommitMsg)
