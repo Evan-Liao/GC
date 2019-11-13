@@ -1,8 +1,18 @@
 ## 关于git syntax的一些总结
 
+2019.11.08
+
+生成authors信息到根目录
+
+```
+git log --format='%aN <%aE>' | sort -u > AUTHORS
+
+```
+
+---
+
 ### 2019.4.12更新
-项目临近上线，为了保证代码质量，leader增加code review环节，意味着小弟我不能随便向master分支提交代码，转变了git-flow工作模式，也在这个时候
-更深一步学习了git。
+项目临近上线，为了保证代码质量，leader增加code review环节，意味着小弟我不能随便向master分支提交代码，转变了git-flow工作模式，也在这个时候更深一步学习了git。
 
 #### code-review开发流程：
 
@@ -66,7 +76,6 @@ git merge dev
 git reset HEAD~n
 
 git reset --hard HEAD~n
-
 ```
 
 n代表需要回退的第几个版本
@@ -82,7 +91,6 @@ n代表需要回退的第几个版本
 
 ```
 git revert COMMIT_ID
-
 ```
 
 以上适用于不小心错误提交代码，并且推送到了远程仓库。这个时候你可以选择把错误代码删除，重新提交推送到远程仓库；又或者使用
@@ -97,14 +105,12 @@ git revert进行版本回退，你需要找到错误提交的commit id，运行�
 
 ```
 git commit --amend
-
 ```
 
 对已经进行了本地提交，但有新的修改文件，想将这些修改的文件整合到这个提交。在此之前，你需要运用git add将文件添加到暂存区
 
 ```
 git rebase -i HEAD~<n>
-
 ```
 
 将多条提交整合到一条。该命令有很多可选项，理解不深就不详细阐述了。。。
@@ -112,7 +118,6 @@ git rebase -i HEAD~<n>
 ```
  git tag 'beta.1'
  git push origin bata.1
-
 ```
 
 为仓库打标签，创建一个代码版本标记，相当于历史快照，QC(测试)可以根据整个tag进行测试，而开发可以在测试期间愉快地进行后续的开发，测试报告出来后
