@@ -12,7 +12,7 @@
 
 ## 学习笔记：
 
-* [《深入浅出NodeJS》](./webpack/mark.md)
+* [《深入浅出Webpack》](./webpack/mark.md)
 * [babel插件](./babel)
 * [apply/call/bind](./js/apply-call-bind.md)
 * [Array相关方法](./js/array.md)
