@@ -2,9 +2,9 @@
 
 ## 业务相关:
 
-* [关键字模糊搜索](./search-by-keyword)
+* [关键字模糊搜索流式实现]](./search-by-keyword)
 * [RxJS处理应用上线并发接收批量websocket离线消息](./RxJs/ws.md)
-* [RxJss实现轮询请求](./RxJs/poll.md)
+* [RxJs实现轮询请求](./RxJs/poll.md)
 * [基于xStateSubject状态管理](./xStateSubject)
 * [深度遍历提取树形结构数据](./dfc/dfc.ts)
 * [GC垃圾回收机制](./gc/gc.md)
