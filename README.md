@@ -12,10 +12,11 @@
 
 ## 学习笔记：
 
-* [《深入浅出Webpack》](./webpack/mark.md)
+* [《深入浅出Webpack》](./book/webpack.md)
 * [babel插件](./babel)
 * [apply/call/bind](./js/apply-call-bind.md)
 * [Array相关方法](./js/array.md)
+* [flex布局总结](./css/flex.md)
 
 ## 其他：
 
