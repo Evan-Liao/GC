@@ -2,7 +2,7 @@
 
 ## 业务相关:
 
-* [关键字模糊搜索流式实现]](./search-by-keyword)
+* [关键字模糊搜索流式实现](./search-by-keyword)
 * [RxJS处理应用上线并发接收批量websocket离线消息](./RxJs/ws.md)
 * [RxJs实现轮询请求](./RxJs/poll.md)
 * [基于xStateSubject状态管理](./xStateSubject)
