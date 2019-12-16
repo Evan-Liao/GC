@@ -12,6 +12,7 @@
 
 ## 学习笔记：
 
+* [webpack编译主流程初窥](./webpack/mark.md)
 * [《深入浅出Webpack》](./book/webpack.md)
 * [babel插件](./babel)
 * [apply/call/bind](./js/apply-call-bind.md)
