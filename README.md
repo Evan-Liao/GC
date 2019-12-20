@@ -7,7 +7,6 @@
 * [RxJs实现轮询请求](./RxJs/poll.md)
 * [基于xStateSubject状态管理](./xStateSubject)
 * [深度遍历提取树形结构数据](./dfc/dfc.ts)
-* [GC垃圾回收机制](./gc/gc.md)
 * [multiple web platform开发设计](./web-multiple-platform)
 
 ## 学习笔记：
@@ -25,3 +24,10 @@
 * [同一电脑配置git多账号](./git/multiple-config.md)
 * [leetcode练习](./leetcode)
 * [规范commit-message](./git/VerifyCommitMsg)
+
+
+## 一些想法
+
+* [2019-12-01](./idea/2019-12-01.md)
+
+
