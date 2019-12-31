@@ -7,7 +7,6 @@
 * [RxJs实现轮询请求](./RxJs/poll.md)
 * [基于xStateSubject状态管理](./xStateSubject)
 * [深度遍历提取树形结构数据](./dfc/dfc.ts)
-* [multiple web platform开发设计](./web-multiple-platform)
 
 ## 学习笔记：
 

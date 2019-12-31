@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://unpkg.com/@reactivex/rxjs@5/dist/global/Rx.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <input ref="input" v-model="keyword" />
+    </div>
+</body>
+<script>
+    let app = new Vue({
+        el: '#app',
+        data() {
+            return {
+                value: '1.00',
+                array: [],
+                keyword: '',
+                keyword$: new Rx.BehaviorSubject(''),
+            }
+        },
+        watch: {
+            keyword(val) {
+                this.keyword$.next(val)
+            }
+        },
+        mounted() {
+            this.keyword$.subscribe(value => {
+                console.log('value', value)
+            })
+        }
+    })
+</script>
+<script>
+    function searchStream(option) {
+        return Rx.Observable.combineLatest(
+            option.keyword$,
+            option.sourceList$,
+            (keyword, sourece) => {
+                if (!keyword) return;
+
+                let matchResultMap = {};
+
+                let wasUserNameMatched = false;
+                let wasRemardMatched = false;
+
+                // 先匹配备注
+                let fuzzySearch =  new FuzzySearch(sourceList, {
+                    includeScore: true,
+                    shouldSort: false,
+                    findAllMatches: false,
+                    threshold: 0.1,
+                    location: 1,
+                    distance: 100,
+                    maxPatternLength: maxSearchingPatternLength,
+                    minMatchCharLength: keyword.length,
+                    includeMatches: true,
+                    keys: ['remark', 'remarkPinyin']
+                });
+
+                fuzzySearch.search(keyword).forEach
+                
+            
+            }
+        )
+    }
+</script>
+</html>
