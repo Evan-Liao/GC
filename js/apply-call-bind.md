@@ -12,7 +12,7 @@ Apply, Call, Bind属于function的prototype方法，允许我们改变函数的*
 
 每个对象都分配有*this*，充当其对象的属性以及方法引用。
 
- ```js
+ ```
  let obj = {
   name: "Alex",
   getName: function(friendName) { // 不要用（）=> {}, 箭头函数会让this指向getName函数对象，this.name会打印出undefind
@@ -27,7 +27,7 @@ obj.getName('Bob'); // "Bob, My Name is: Alex"
 
 此时如果我想改变*this*指向呢（终于回到主题了），先说apply，后面会说三者的区别
  
-```js
+```
  let otherObj = { name: 'Lucas' }
  let obj = {
   name: "Alex",
@@ -52,17 +52,17 @@ apply传入了两个参数，第一个是参数为*this*指向的目标对象，
 
 通过Apply，Call, Bind方法，在对象中引入其他对象的一些特有属性（很重要）, 例如array类型可以引入Math的max方法求最大值，在string引入array的filter方法。
 
-🌰借助Math.max在数组中找到最大值
+### 借助Math.max在数组中找到最大值
 
-```js
+```
 let a = [1, 2, 3, 4]
 let max = Math.max.call(null, a)
 console.log(max) // 4
 ```
 
-🌰string类型通过call方法实现filter
+### string类型通过call方法实现filter
 
-```js
+```
 let letters = "abcd"
 let new = Array.property.filter.call(letters, letter => {
     return letter !== a;
